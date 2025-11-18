@@ -1,0 +1,69 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1a0000 0%, #000000 70%);
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://i.ibb.co/HPkW2cB/fallout-particles.gif');
+  opacity: 0.15;
+  pointer-events: none;
+  animation: pulse 12s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+.final-10 .clock {
+  animation: nuclearPulse 0.5s infinite alternate !important;
+  filter: drop-shadow(0 0 40px #ff0033) brightness(1.4);
+}
+
+@keyframes nuclearPulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+body.final-10 {
+  background: radial-gradient(circle at center, #330000 0%, #000000 70%) !important;
+}
+
+.chart-line {
+  stroke: #00ff9d;
+  stroke-width: 6;
+  filter: drop-shadow(0 0 15px #00ff9d);
+  animation: neon 3s infinite alternate;
+}
+
+@keyframes neon {
+  from { filter: drop-shadow(0 0 15px #00ff9d); }
+  to { filter: drop-shadow(0 0 25px #00ff9d); }
+}
+
+.gold-coin {
+  filter: drop-shadow(0 0 30px gold);
+  animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
